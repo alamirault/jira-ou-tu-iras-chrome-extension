@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Jira où tu iras",
+  "version": "1.0",
+  "description": "Quick open tickets",
+  "icons": {
+    "16": "images/joti-16.png",
+    "32": "images/joti-32.png",
+    "48": "images/joti-48.png",
+    "128": "images/joti-128.png"
+  },
+  "action": {
+    "default_popup": "modules/popup/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "modules/options/options.html",
+    "open_in_tab": false
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

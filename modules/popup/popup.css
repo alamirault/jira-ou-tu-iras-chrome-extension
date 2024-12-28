@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 125px;
+    margin: 0;
+    padding: 5px;
+}
+
+#open-ticket input{
+    width: 75px;
+}
+
+#open-ticket button{
+    cursor: pointer;
+    background: #579dff;
+    border: 0;
+    border-radius: 3px;
+    padding: 3px 10px;
+}
+
+#go-to-options{
+    cursor: pointer;
+    color: #0052cc;
+    font-weight: 400;
+}
+
+/*button {*/
+/*    padding: 10px;*/
+/*    background-color: #4CAF50;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*button:hover {*/
+/*    background-color: #45a049;*/
+/*}*/
