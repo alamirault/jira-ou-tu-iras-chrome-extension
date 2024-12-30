@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "name": "Jira où tu iras",
-  "description": "Quick open tickets",
+  "description": "Quickly open Jira tickets",
   "manifest_version": 3,
   "action": {
     "default_popup": "modules/popup/popup.html"
