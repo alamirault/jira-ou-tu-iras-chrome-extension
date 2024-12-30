@@ -1,5 +1,12 @@
 const saveOptions = () => {
-    const jiraDomain = document.getElementById('jiraDomain').value;
+    let rawJiraDomain = document.getElementById('jiraDomain').value;
+
+    if(false === rawJiraDomain.startsWith("http")){
+        rawJiraDomain= 'https://' + rawJiraDomain;
+    }
+
+    const jiraDomain = (new URL(rawJiraDomain)).host
+
     const defaultProjectKey = document.getElementById('defaultProjectKey').value;
 
     chrome.storage.sync.set(
@@ -18,14 +25,12 @@ const saveOptions = () => {
     );
 };
 
-// Restores select box and checkbox state using the preferences
-// stored in chrome.storage.
 const restoreOptions = () => {
     chrome.storage.sync.get(
         ['jiraDomain', 'defaultProjectKey'],
         (items) => {
             document.getElementById('jiraDomain').value = items.jiraDomain;
-            document.getElementById('defaultProjectKey').checked = items.defaultProjectKey;
+            document.getElementById('defaultProjectKey').value = items.defaultProjectKey;
         }
     );
 };

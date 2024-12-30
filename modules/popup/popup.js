@@ -4,6 +4,11 @@ chrome.storage.sync.get(
     ['jiraDomain', 'defaultProjectKey'],
     (items) => {
         document.getElementById("ticket-input").placeholder = items.defaultProjectKey + '-XXXX';
+
+        if(null === items.jiraDomain){
+            console.log(items.jiraDomain);
+            document.getElementById("warning").innerText = "You must configure first !"
+        }
     }
 );
 

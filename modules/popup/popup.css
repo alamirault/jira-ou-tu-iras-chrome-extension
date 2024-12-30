@@ -1,8 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    width: 125px;
+    width: 150px;
     margin: 0;
     padding: 5px;
+}
+
+#warning{
+    color: #C9372C;
+    font-weight: bold;
 }
 
 #open-ticket input{
